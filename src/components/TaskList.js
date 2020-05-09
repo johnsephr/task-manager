@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-// 3rd party imports
+// mui
 import { makeStyles } from '@material-ui/core/styles';
 
 // contexts
