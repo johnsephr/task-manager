@@ -3,7 +3,7 @@ import './App.css';
 
 // 3rd party imports
 import { makeStyles } from '@material-ui/core/styles'
-import { useMediaPredicate } from "react-media-hook"
+import {isMobile} from 'react-device-detect';
 
 // contexts
 import TaskListContextProvider from './contexts/TaskListContext';
@@ -29,10 +29,9 @@ const useStyles = makeStyles(theme => ({
 
 const App = props => {
     const classes = useStyles(props);
-    const smallerThan420 = useMediaPredicate("(max-width: 420px)");
     return (
         <TaskListContextProvider>
-            <div className={classes.container} style={smallerThan420 ? { height: 'auto', paddingTop: 10, paddingBottom: 10 } : { height: '100vh' }}>
+            <div className={classes.container} style={isMobile ? { height: 'auto', paddingTop: 10, paddingBottom: 10 } : { height: '100vh' }}>
                 <div className={classes.appWrapper}>
                     <Header />
                     <div>
