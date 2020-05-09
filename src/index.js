@@ -6,11 +6,6 @@ import App from './App';
 import { CssBaseline } from '@material-ui/core';
 import ThemeProvider from './mui/ThemeProvider';
 
-// fonts
-import './fonts/SF-Pro-Text/SF-Pro-Text-Heavy.otf';
-import './fonts/SF-Pro-Text/SF-Pro-Text-Medium.otf';
-import './fonts/SF-Pro-Text/SF-Pro-Text-Regular.otf';
-
 ReactDOM.render(
     <ThemeProvider>
         <CssBaseline />
