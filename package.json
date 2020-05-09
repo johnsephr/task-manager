@@ -12,7 +12,6 @@
     "date-fns": "^2.13.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-media-hook": "^0.4.7",
     "react-scripts": "3.4.1",
     "uuid": "^8.0.0"
   },
