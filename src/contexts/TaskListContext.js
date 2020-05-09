@@ -8,10 +8,8 @@ import format from 'date-fns/format';
 export const TaskListContext = createContext();
 
 const TaskListContextProvider = props => {
-    // retrieve task list from local storage and set it as initial state (if list is not present, set as empty array)
-    const initialState = JSON.parse(localStorage.getItem('tasks') || []);
     // list of tasks (state var)
-    const [tasks, setTasks] = useState(initialState);
+    const [tasks, setTasks] = useState([]);
 
 
     // edit in progress (state var)

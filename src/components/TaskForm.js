@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 
 // mui
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { MuiPickersUtilsProvider, DateTimePicker } from '@material-ui/pickers';
 
@@ -23,7 +23,9 @@ const useStyles = makeStyles(theme => ({
     text: {
         color: theme.palette.primary.light,
         textAlign: 'center',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        paddingTop: 30,
+        paddingBottom: 15,
     },
     taskTitle: {
         textTransform: 'uppercase',
@@ -82,7 +84,7 @@ const TaskForm = props => {
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <form onSubmit={handleSubmit} className={classes.form}>
 
-                <p className={classes.text}>Title</p>
+                <Typography variant='body1' className={classes.text} style={{ paddingTop: 0 }}>Title</Typography>
                 <TextField
                     className={classes.taskTitle}
                     onChange={handleTitleChange}
@@ -90,8 +92,8 @@ const TaskForm = props => {
                     value={title}
                     required
                 />
-                
-                <p className={classes.text}>Description</p>
+
+                <Typography variant='body1' className={classes.text}>Description</Typography>
                 <TextField
                     className={classes.taskTitle}
                     onChange={handleDescriptionChange}
@@ -101,7 +103,7 @@ const TaskForm = props => {
                 />
 
                 <div className={classes.dateTimePickerContainer}>
-                    <p className={classes.text}>Target Completion Date</p>
+                    <Typography variant='body1' className={classes.text}>Target Completion Date</Typography>
                     <DateTimePicker
                         className={classes.dateTimePicker}
                         value={targetDate}
