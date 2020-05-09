@@ -1,1 +1,1 @@
-This project is intended to demonstrate my ability to fulfill the role of Front End Developer at MedEd.
+Task Manager app for MedEd.
