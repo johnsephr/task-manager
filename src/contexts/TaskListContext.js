@@ -11,7 +11,6 @@ const TaskListContextProvider = props => {
     // list of tasks (state var)
     const [tasks, setTasks] = useState([]);
 
-
     // edit in progress (state var)
     const [editItem, setEditItem] = useState(null);
 
@@ -19,7 +18,6 @@ const TaskListContextProvider = props => {
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }, [tasks]);
-
 
     // add task to task list
     const addTask = (title, description, targetDate) => {
@@ -72,7 +70,7 @@ const TaskListContextProvider = props => {
                         targetDate: task.targetDate,
                         completed: !task.completed,
                         completionDate: ''
-                    }
+                    };
                 } else {
                     // if task was not completed, update task as completed and add completion date
                     return {
@@ -82,10 +80,10 @@ const TaskListContextProvider = props => {
                         targetDate: task.targetDate,
                         completed: !task.completed,
                         completionDate: format(new Date(), 'MMM d, yyyy h:mma')
-                    }
-                }
+                    };
+                };
             } else return task
-        })
+        });
 
         setTasks(newTasks);
     };
