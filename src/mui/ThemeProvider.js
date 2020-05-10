@@ -1,7 +1,7 @@
 import React from 'react';
 import theme from './theme';
 
-// MUI
+// mui
 import { MuiThemeProvider } from '@material-ui/core';
 
 const ThemeProvider = props => {

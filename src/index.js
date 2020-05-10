@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-// mui / theme
+// mui / theme provider
 import { CssBaseline } from '@material-ui/core';
 import ThemeProvider from './mui/ThemeProvider';
 
