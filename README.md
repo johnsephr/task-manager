@@ -1,4 +1,4 @@
-Task Manager app for MedEd.
+Task Manager app.
 
 To preview, install dependencies:
 
